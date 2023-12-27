@@ -1,14 +1,66 @@
 
-public class memojang {
+public class day04_Exam_insertionSort {
 	public static void main(String [] args) {
 		
-		// 삽입정렬
+		// 삽입정렬(Insertion Sort)
 		// 정렬 알고리즘 중에 하나, 가장 간단하고 기본이 되는 알고리즘
 		// 배열의 N번 인덱스값을 0번에서 n-1번 인덱스까지 비교~!
 		// N은 1부터 시작
 		// {2, 5, 4, 1, 3}
-		// 오름차순, 작은거 찾아야 됨
+		// 1 : 5와 2 비교 -> X
+		// 첫번째 결과 {2, 5, 4, 1, 3}
+		// 1 : 4와 5비교 -> 교환
+		// 2 : 4와 2비교 -> x
+		// 두번째 결과 {2, 4, 5, 1, 3}
+		// 1 : 1과 5비교 -> 교환 {2, 4, 1, 5, 3}
+		// 2 : 1과 4비교 -> 교환 {2, 1, 4, 5, 3}
+		// 3 : 1과 2비교 -> 교환 {1, 2, 4, 5, 3}
+		// 세번째 결과 {1, 2, 4, 5, 3}
+		// 1 : 3과 5비교 -> 교환 {1, 2, 4, 3, 5}
+		// 2 : 3과 4비교 -> 교환 {1, 2, 3, 4, 5}, 이때 정렬 끝
+		// 3 : 3과 2비교 -> X
+		// 4 : 3과 1비교 -> X
 		
+		int arrs [] = {2, 5, 4, 1, 3}
+		for(int j = 1; j < arrs.length; j++)
+			if(arrs[i-1] > arrs[i]) {
+				int temp = arrs[i];
+				arrs[i] = arrs[i-1];
+				arrs[i-1] = temp;
+			}
+	
+			
+			
+		// {2, 5, 4, 1, 3}
+		if(arrs[1] > arrs[2] ) {
+			int temp = arrs[2];
+			arrs[2] = arrs[1];
+			arrs[1] = temp;			
+		}
+		if(arrs[0] > arrs[1] ) {
+			int temp = arrs[1];
+			arrs[1] = arrs[0];
+			arrs[0] = temp;			
+		}
+		// {2, 4, 5, 1, 3}
+		if(arrs[2] > arrs[3]) {
+			int temp = arrs[3];
+			arrs[3] = arrs[2];
+			arrs[2] = temp;
+		}
+		if(arrs[1] > arrs[2]) {
+			int temp = arrs[2];
+			arrs[2] = arrs[1];
+			arrs[1] = temp;
+		}
+		if(arrs[0] > arrs[1]) {
+			int temp = arrs[1];
+			arrs[1] = arrs[0];
+			arrs[0] = temp;
+		}
+		
+		
+		// 오름차순, 작은거 찾아야 됨		
 		// 1 : 2하고 5비교 -> x
 		// 1번째 동작 결과 {2, 5, 4, 1, 3}
 		

@@ -1,5 +1,5 @@
 
-public class memojang {
+public class day04_Exam_InsertionSort_ {
 	public static void main(String [] args) {
 		
 		// 삽입정렬

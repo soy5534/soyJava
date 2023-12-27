@@ -1,3 +1,4 @@
+package Exam;
 
 public class Exam_TypeTrans2 {
 	public static void main(String [] args) {

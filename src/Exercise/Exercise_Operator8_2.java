@@ -1,6 +1,7 @@
+package Exercise;
 import java.util.Scanner;
 
-public class Exercise_Operator8 {
+public class Exercise_Operator8_2 {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		// 문제8.
@@ -10,18 +11,19 @@ public class Exercise_Operator8 {
 		// 여자
 		
 		 // 가이드메세지 입력 ( 사용자입력 Y / N )
+		
 		System.out.print("주민번호를 입력하세요(- 포함) : ");
-		String personalNum = sc.next();
-		// SUBSTR(EMP_NO, 8,1) IN ('2', '4')
-		if(personalNum.charAt(7) == '2'
-				|| personalNum.charAt(7) == '4') {
-			System.out.println("여자");
-		} else {
-			System.out.println("남자");
+		char socialNum = sc.next().charAt(7);
+		
+		switch(socialNum) {
+			case '1' : // 생략 가능
+			case '3' : System.out.println("남자"); break;
+			case '2' : // 생략 가능
+			case '4' : System.out.println("여자"); break;
+			default : System.out.println("잘못된 데이터를입력하셨습니다.");
 		}
 		
 		sc.close();
-		
 		
 	}
 }
